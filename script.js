@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const feedbackDiv = document.getElementById("form-feedback");
 
     form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent form submission
+        event.preventDefault(); 
 
         const username = document.getElementById("username").value.trim();
         const email = document.getElementById("email").value.trim();
@@ -31,13 +31,14 @@ document.addEventListener("DOMContentLoaded", function () {
         feedbackDiv.style.display = "block";
         if (isValid) {
             feedbackDiv.textContent = "Registration successful!";
-            feedbackDiv.style.color = "#28a745"; // Green text
-            feedbackDiv.style.backgroundColor = "#d4edda"; // Light green background
+            feedbackDiv.style.color = "#28a745"; 
+            feedbackDiv.style.backgroundColor = "#d4edda"; 
         } else {
             feedbackDiv.innerHTML = messages.join("<br>");
-            feedbackDiv.style.color = "#dc3545"; // Red text
-            feedbackDiv.style.backgroundColor = "#f8d7da"; // Light red background
+            feedbackDiv.style.color = "#dc3545"; 
+            feedbackDiv.style.backgroundColor = "#f8d7da"; 
         }
     });
 });
+
 
